@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Space Mono');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+:root {
+    --color-1: #333333;
+    --color-2: #4F4F4F;
+    --footer-color: #BDBDBD;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    font-family: "Space Mono";
+    font-size: 24px;
+    font-weight: 700;
+    position: relative;
+}
+
+/* Header */
+.header {
+    display: fixed;
+    height: 80px;
+    width: 100%;
+    position: relative;
+}
+
+.title {
+    font-size: 24px;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(0, -50%);
+}
+
+
+/* Content */
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.col {
+    width: 50%;
+    min-width: 375px;
+    margin: 20px;
+}
+
+.scarecrowImg img {
+    width: 100%;
+    min-width: 286px;
+    object-fit: contain;
+}
+
+.item {
+    margin-block: 2rem;
+}
+
+.content h1 {
+    font-size: 64px;
+}
+
+.content p {
+    max-width: 400px;
+    font-weight: 400;
+}
+
+.goToHomePage {
+    width: 216px;
+    height: 68px;;
+    font-size: 14px;
+    background-color: var(--color-1);
+    position: relative;
+    margin-top: 2rem;
+}
+
+.goToHomePage a {
+    text-decoration: none;
+    color: #FFFFFF;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+/* Footer */
+
+.footer {
+    padding: auto;
+    margin-top: 200px;
+    padding-bottom: 40px;
+    width: 100%;
+    font-family: "Montserrat";
+    font-size: 14px;
+    color: var(--footer-color);
+    text-align: center;
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--footer-color);
+}
+
+
+
+/* 404 mobile */
+@media screen and (max-width: 600px){
+    .container {
+        display: block;
+    }
+
+    .scarecrowImg img {
+        width: 75%;
+    }
+
+    .col {
+        width: 75%;
+        /* align-items: center; */
+    }
+
+    .content h1 {
+        font-size: 43px;
+    }
+
+    .content p {
+        /* max-width: 100%; */
+        width: 328px;
+        font-size: 18px;
+    }
+}
