@@ -10,13 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
       - name: Set up Git
         run: |
           git config --global user.name "Uyen Bui Huynh Kim"
-          git config --global user.email "21521659@gm.uit.edu.vm"
+          git config --global user.email "uyen.bhku@gmail.com"
           git config --global credential.helper store
+          echo "machine github.com login your-username password your-personal-access-token" > ~/.netrc
 
       - name: Update submodule
         run: |
