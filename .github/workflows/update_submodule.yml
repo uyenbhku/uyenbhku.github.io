@@ -14,18 +14,18 @@ jobs:
 
       - name: Set up Git
         run: |
-          git config --global user.name "UyenK"
+          git config --global user.name "Uyen Bui Huynh Kim"
           git config --global user.email "21521659@gm.uit.edu.vm"
           git config --global credential.helper store
 
       - name: Update submodule
         run: |
           git submodule update --init --recursive
-          cd CS105.O21/demo/
+          cd CS105.O21/demo
           git fetch origin main
           git checkout main
           cd ..
-          git add CS105.O21/demo/
+          git add .
           git commit -m "Update submodule to latest"
           git push --force origin main
         env:
